@@ -12,6 +12,8 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzTreeModule } from 'ng-zorro-antd/tree';
+import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 
 export const APP_IMPORTS = [
     CommonModule,
@@ -27,5 +29,7 @@ export const APP_IMPORTS = [
     NzUploadModule,
     NzIconModule,
     NzCheckboxModule,
-    NzRadioModule
+    NzRadioModule,
+    NzTreeModule,
+    NzTreeViewModule
 ]
