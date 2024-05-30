@@ -1,3 +1,20 @@
+<!-- <div style="padding: 50px;">
+  <ng-container *ngFor="let sWealth of sWealths; index as i">
+    <label nz-checkbox [ngModel]='sWealth.check' (ngModelChange)="clickCheck(i)">{{sWealth.name}}</label><br>
+  </ng-container>
+</div>
+<div style="padding: 30px;">
+  <button nz-button (click)="testClick(1)">test-1</button>
+  <button nz-button (click)="testClick(2)">test-2</button>
+  <button nz-button (click)="testClick(3)">test-3</button>
+</div>
+
+<nz-checkbox-wrapper style="width: 100%;" (nzOnChange)="log($event)">
+  <ng-container *ngFor="let sWealth of sWealths; index as i">
+    <label nz-checkbox [ngModel]='sWealth.check' [nzValue]="sWealth.name">{{sWealth.name}}</label><br>
+  </ng-container>
+</nz-checkbox-wrapper>
+
 <div class="main-wrapper">
   <div class="feature-wrapper">
     <h3>Label</h3>
@@ -188,4 +205,23 @@
     <div>Radio 2 Value - {{radioValue2}}</div>
     <br>
   </div>
-</div>
+</div> -->
+  <div class="feature-wrapper">
+    <h3>File Upload</h3>
+    <br>
+    <div style="max-width: 400px;">
+      <nz-upload class="upload-wrapper" nzAction="https://jsonplaceholder.typicode.com/posts/"
+        [nzHeaders]="{ authorization: 'authorization-text' }" (nzChange)="handleChange($event)"
+        [nzIconRender]="fileListTpl">
+        <button nz-button class="upload-button">
+          <span>
+            <span nz-icon nzType="plus-circle" nzTheme="outline"></span>
+            Tap here to upload another file
+          </span>
+        </button>
+      </nz-upload>
+      <ng-template #fileListTpl let-list>
+        <img src="../../../assets/images/CIMB/attachment.svg" alt="">
+      </ng-template>
+    </div>
+  </div>
